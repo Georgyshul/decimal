@@ -48,13 +48,11 @@ $(BUILD_TEST_DIR)/%.o: %.c
 # 	@mkdir -p $(dir $@)
 # 	$(CC) $(TEST_FLAGS) -c $< -o $@
 
-# gcov_report: clean
-# 	$(CC) $(CFLAGS) $(GCOVFLAGS) $(SRC) $(LFLAGS) -o gcov.out
-# 	./gcov.out
-# 	lcov --capture --directory . --output-file coverage.info
-# 	genhtml coverage.info --output-directory gcov_report
-# 	open $(GCOV_DIR)/index.html
-# 	rm -Rf *.gcda *.cov *.gcno *.info
+gcov_report:
+	$(CC) $(CFLAGS) $(GCOVFLAGS) $(SRC) decimal_test.c tests/*.c $(LFLAGS) -o gcov_main -L /usr/lib -I /usr/include
+	./gcov_main
+	lcov --capture --directory . --output-file coverage.info
+	genhtml coverage.info --output-directory gcov_report
 
 # .PHONY: clean rebuild lint test
 clean: 
@@ -63,7 +61,9 @@ clean:
 	rm -rf $(BUILD_DIR)
 	rm -rf $(BUILD_TEST_DIR)
 	rm -rf $(GCOV_OBJ_DIR)
+	rm -rf $(GCOV_DIR)
 	rm -f test.out
+	rm -f coverage.info gcov_main
 
 rebuild: clean all
 
