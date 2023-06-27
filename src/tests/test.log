@@ -1,0 +1,101 @@
+Running suite equal
+tests/comparsion_suite.c:15:P:Core:is_equal_simple:0: Passed
+tests/comparsion_suite.c:26:P:Core:is_equal_0_decimal:0: Passed
+tests/comparsion_suite.c:41:P:Core:is_not_equal:0: Passed
+tests/comparsion_suite.c:69:P:Core:is_not_equal_SIGN:0: Passed
+tests/comparsion_suite.c:54:P:Core:is_not_equal_EQ:0: Passed
+tests/comparsion_suite.c:99:P:Core:is_greater_stand:0: Passed
+tests/comparsion_suite.c:84:P:Core:is_greater_le:0: Passed
+tests/comparsion_suite.c:129:P:Core:is_greater_0:0: Passed
+tests/comparsion_suite.c:114:P:Core:is_greater_eq:0: Passed
+tests/comparsion_suite.c:174:P:Core:is_less_Classic:0: Passed
+tests/comparsion_suite.c:159:P:Core:is_less_equal:0: Passed
+tests/comparsion_suite.c:144:P:Core:is_less_ne:0: Passed
+tests/comparsion_suite.c:189:P:Core:is_less_or_equal_Classic:0: Passed
+tests/comparsion_suite.c:204:P:Core:is_less_or_equal_Norm:0: Passed
+Running suite s21_add
+tests/add_suite.c:23:P:Core:basic_add:0: Passed
+tests/add_suite.c:47:P:Core:basic_add_2:0: Passed
+tests/add_suite.c:84:P:Core:big_values_add:0: Passed
+tests/add_suite.c:295:P:Core:big_values_add_2:0: Passed
+tests/add_suite.c:106:P:Core:big_values_overflow:0: Passed
+tests/add_suite.c:140:P:Core:basic_add_dot:0: Passed
+tests/add_suite.c:172:P:Core:basic_add_dot_2:0: Passed
+tests/add_suite.c:216:P:Core:big_values_dot_overflow:0: Passed
+tests/add_suite.c:241:P:Core:return_to_sub:0: Passed
+tests/add_suite.c:266:P:Core:return_to_sub_2:0: Passed
+tests/add_suite.c:324:P:Core:add_zero:0: Passed
+Running suite sub_suite
+tests/sub_suite.c:28:P:Core:basic_sub:0: Passed
+tests/sub_suite.c:52:P:Core:basic_sub_2:0: Passed
+tests/sub_suite.c:81:P:Core:basic_sub_3:0: Passed
+tests/sub_suite.c:108:P:Core:basic_sub_4:0: Passed
+tests/sub_suite.c:137:P:Core:sub_with_dot:0: Passed
+tests/sub_suite.c:163:P:Core:sub_with_dot_2:0: Passed
+tests/sub_suite.c:190:P:Core:return_to_add:0: Passed
+tests/sub_suite.c:215:P:Core:return_to_add_2:0: Passed
+tests/sub_suite.c:246:P:Core:big_values_sub:0: Passed
+Running suite s21_mul
+tests/mul_suite.c:22:P:Core:basic_mul:0: Passed
+tests/mul_suite.c:53:P:Core:basic_mul_2:0: Passed
+tests/mul_suite.c:74:P:Core:mul_with_overflow:0: Passed
+tests/mul_suite.c:106:P:Core:mul_that_still_fits:0: Passed
+tests/mul_suite.c:153:P:Core:mul_with_overflow_2:0: Passed
+tests/mul_suite.c:200:P:Core:mul_with_overflow_3:0: Passed
+Running suite s21_div
+tests/div_suite.c:19:P:Core:short_div:0: Passed
+tests/div_suite.c:40:P:Core:basic_div:0: Passed
+tests/div_suite.c:68:P:Core:basic_div_2:0: Passed
+tests/div_suite.c:96:P:Core:basic_div_3:0: Passed
+tests/div_suite.c:112:P:Core:div_by_zero:0: Passed
+tests/div_suite.c:134:P:Core:div_zero:0: Passed
+tests/div_suite.c:170:P:Core:result_too_small:0: Passed
+tests/div_suite.c:152:P:Core:result_too_big:0: Passed
+tests/div_suite.c:195:P:Core:big_values_div:0: Passed
+tests/div_suite.c:220:P:Core:big_values_div_2:0: Passed
+tests/div_suite.c:269:P:Core:big_values_div_3:0: Passed
+tests/div_suite.c:318:P:Core:big_values_div_4:0: Passed
+Running suite s21_mod
+tests/mod_suite.c:22:P:Core:basic_mod:0: Passed
+tests/mod_suite.c:63:P:Core:basic_mod_2:0: Passed
+tests/mod_suite.c:107:P:Core:basic_mod_3:0: Passed
+tests/mod_suite.c:132:P:Core:readme_mod:0: Passed
+tests/mod_suite.c:153:P:Core:division_on_zero:0: Passed
+tests/mod_suite.c:175:P:Core:division_zero:0: Passed
+Running suite conversion
+tests/conversion_suite.c:52:P:Core:int_decimal_int_1:0: Passed
+tests/conversion_suite.c:62:P:Core:int_decimal_int_2:0: Passed
+tests/conversion_suite.c:72:P:Core:int_decimal_int_3:0: Passed
+tests/conversion_suite.c:82:P:Core:int_decimal_int_4:0: Passed
+tests/conversion_suite.c:92:P:Core:int_decimal_int_5:0: Passed
+tests/conversion_suite.c:102:P:Core:int_decimal_int_6:0: Passed
+tests/conversion_suite.c:112:P:Core:int_decimal_int_7:0: Passed
+tests/conversion_suite.c:116:P:Core:float_decimal_float_1:0: Passed
+tests/conversion_suite.c:126:P:Core:float_decimal_float_2:0: Passed
+tests/conversion_suite.c:136:P:Core:float_decimal_float_3:0: Passed
+tests/conversion_suite.c:5:P:Core:from_float_to_decimal_simple:0: Passed
+tests/conversion_suite.c:13:P:Core:float_eq_float:0: Passed
+tests/conversion_suite.c:24:P:Core:float_eq_float_minus:0: Passed
+tests/conversion_suite.c:35:P:Core:float_eq_float_hard_test:0: Passed
+Running suite negate
+tests/negate_suite.c:20:P:Core:s21_negate_1:0: Passed
+tests/negate_suite.c:43:P:Core:s21_negate_2:0: Passed
+Running suite truncate
+tests/truncate_suite.c:35:P:Core:simple_truncate:0: Passed
+tests/truncate_suite.c:56:P:Core:simple_truncate_2:0: Passed
+tests/truncate_suite.c:79:P:Core:zero_truncate:0: Passed
+Running suite round
+tests/round_suite.c:35:P:Core:simple_round:0: Passed
+tests/round_suite.c:62:P:Core:simple_round_2:0: Passed
+tests/round_suite.c:90:P:Core:simple_round_3:0: Passed
+tests/round_suite.c:116:P:Core:simple_round_4:0: Passed
+tests/round_suite.c:141:P:Core:math_round:0: Passed
+Running suite floor
+tests/floor_suite.c:31:P:Core:simple_floor:0: Passed
+tests/floor_suite.c:58:P:Core:simple_floor_2:0: Passed
+tests/floor_suite.c:86:P:Core:simple_floor_3:0: Passed
+tests/floor_suite.c:112:P:Core:simple_floor_4:0: Passed
+tests/floor_suite.c:137:P:Core:math_floor:0: Passed
+tests/floor_suite.c:159:P:Core:floor_on_int:0: Passed
+Results for all suites run:
+100%: Checks: 88, Failures: 0, Errors: 0
