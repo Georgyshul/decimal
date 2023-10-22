@@ -73,6 +73,7 @@ void print_binary_representation_std(s21_decimal std);
 void print_binary_representation_alt(s21_decimal_alt alt);
 void print_binary_representation_std_s(s21_decimal std);
 void print_binary_representation_alt_s(s21_decimal_alt alt);
+
 void print_str_decimal_std(s21_decimal decimal);
 
 s21_decimal_alt s21_convert_int_to_alt(unsigned long int number);

@@ -47,7 +47,7 @@ void print_binary_representation_alt_s(s21_decimal_alt alt) {
 }
 ///////////////////////////////////////////////////////////
 
-
+/*
 void print_str_decimal_std(s21_decimal decimal) {
   mpz_t number;
   mpz_init(number);
@@ -65,4 +65,30 @@ void print_str_decimal_std(s21_decimal decimal) {
 
   mpz_clear(number);
   free(decimalString);
+}
+*/
+
+void print_str_decimal_std(s21_decimal decimal) {
+  char str[97];
+  int index = 0;
+  mpz_t res;
+  mpz_init(res);
+
+  for (int i = 2; i >= 0; --i) {
+      for (long int j = 31; j >= 0; --j) {
+          if (decimal.bits[i] & (1 << j)) {
+              str[index++] = '1';
+          } else {
+              str[index++] = '0';
+          }
+      }
+  }
+  str[index] = 0;
+
+  mpz_set_str(res, str, 2);
+
+  if (get_sign_bit(decimal)) printf("-");
+  gmp_printf("%Zd * 10^(-%d)\n", res, get_exponent_rang(decimal));
+
+  mpz_clear(res);
 }
