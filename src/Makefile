@@ -62,7 +62,7 @@ clean:
 	rm -rf $(BUILD_TEST_DIR)
 	rm -rf $(GCOV_OBJ_DIR)
 	rm -rf $(GCOV_DIR)
-	rm -f test.out
+	rm -f *.out
 	rm -f coverage.info gcov_main
 
 rebuild: clean all
@@ -75,3 +75,6 @@ lint:
 	# -find . -type f -name "*.c" | xargs cppcheck --enable=all --suppress=missingIncludeSystem
 	# rm -f CPPLINT.cfg
 
+
+run: s21_test_decimal.c s21_decimal.a
+	$(CC) $(CFLAGS) $^ $(LFLAGS) -lgmp -o run.out

@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "s21_utility.h"
+#include <gmp.h>
 
 // функции побитовой печати не нужны для сдачи проекта
 // чисто для проверки
@@ -44,3 +46,23 @@ void print_binary_representation_alt_s(s21_decimal_alt alt) {
   printf(" %i %i\n", alt.sign, alt.exp);
 }
 ///////////////////////////////////////////////////////////
+
+
+void print_str_decimal_std(s21_decimal decimal) {
+  mpz_t number;
+  mpz_init(number);
+
+  s21_decimal_alt alt = s21_convert_std_to_alt(decimal);
+
+  for (int i = 95; i >= 0; i--) {
+    mpz_mul_ui(number, number, 2);
+    mpz_add_ui(number, number, alt.bits[i]);
+  }
+
+  char* decimalString = mpz_get_str(NULL, 10, number);
+
+  printf("%s\n", decimalString);
+
+  mpz_clear(number);
+  free(decimalString);
+}
